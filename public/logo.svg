@@ -1,69 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Zia Connections: matches reference design -->
+  <!-- Zia Connections v5: matches reference design more faithfully -->
   <!-- - Thick outer ring (red) -->
-  <!-- - HOLLOW white center circle (negative space, not filled) -->
-  <!-- - 10 lines from center area to outer ring: -->
-  <!--   - Top: 2 vertical lines -->
-  <!--   - Bottom: 2 vertical lines -->
-  <!--   - Left: 3 horizontal lines -->
-  <!--   - Right: 3 horizontal lines -->
-  <!-- - 4 quadrant globe/lattice patterns (curved meridian + parallel lines like a globe's grid) -->
-  <!-- - Color: brick red / firebrick (#a02828) -->
+  <!-- - HOLLOW white center circle (negative space) -->
+  <!-- - 10 lines: top 2, bottom 2, left 3, right 3 -->
+  <!-- - 4 quadrants each with 3 simple arcs (globe longitude style) -->
+  <!-- - Brick red / firebrick -->
 
   <g transform="translate(100,100)">
-    <!-- Thick outer ring (frame) -->
+    <!-- Outer thick ring -->
     <circle cx="0" cy="0" r="92" fill="none" stroke="#a02828" stroke-width="6"/>
 
-    <!-- Hollow white center circle (negative space) -->
-    <circle cx="0" cy="0" r="12" fill="#ffffff" stroke="#a02828" stroke-width="4"/>
+    <!-- Hollow white center circle -->
+    <circle cx="0" cy="0" r="11" fill="#ffffff" stroke="#a02828" stroke-width="4"/>
 
-    <!-- 4 cardinal rays: top (2 vertical lines) -->
-    <line x1="-7" y1="-13" x2="-7" y2="-80" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="7"  y1="-13" x2="7"  y2="-80" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- 4 cardinal rays: top (2 vertical lines), from outside the center disk to the outer ring -->
+    <line x1="-6" y1="-12" x2="-6" y2="-78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <line x1="6"  y1="-12" x2="6"  y2="-78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
 
-    <!-- 4 cardinal rays: bottom (2 vertical lines) -->
-    <line x1="-7" y1="13" x2="-7" y2="80" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="7"  y1="13" x2="7"  y2="80" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- Bottom (2 vertical lines) -->
+    <line x1="-6" y1="12" x2="-6" y2="78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <line x1="6"  y1="12" x2="6"  y2="78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
 
-    <!-- 4 cardinal rays: left (3 horizontal lines) -->
-    <line x1="-13" y1="-10" x2="-80" y2="-10" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="-13" y1="0"   x2="-80" y2="0"   stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="-13" y1="10"  x2="-80" y2="10"  stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- Left (3 horizontal lines) -->
+    <line x1="-12" y1="-10" x2="-78" y2="-10" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-12" y1="0"   x2="-78" y2="0"   stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-12" y1="10"  x2="-78" y2="10"  stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
 
-    <!-- 4 cardinal rays: right (3 horizontal lines) -->
-    <line x1="13" y1="-10" x2="80" y2="-10" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="13" y1="0"   x2="80" y2="0"   stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="13" y1="10"  x2="80" y2="10"  stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- Right (3 horizontal lines) -->
+    <line x1="12" y1="-10" x2="78" y2="-10" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <line x1="12" y1="0"   x2="78" y2="0"   stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <line x1="12" y1="10"  x2="78" y2="10"  stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
 
-    <!-- 4 quadrant globe/lattice patterns: curved meridian + parallel lines, like a globe's grid -->
-    <!-- Top-right quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round" opacity="0.85">
-      <!-- Arcs: parallels (latitudes) curving between top and right rays -->
-      <path d="M 7,-80 Q 50,-50 80,-10"/>
-      <path d="M 7,-80 Q 30,-40 80,10" opacity="0.7"/>
-      <!-- Meridian: longer curve going from outer ring toward center -->
-      <path d="M 7,-80 Q 60,-30 80,-10"/>
+    <!-- 4 quadrants, 3 simple arcs each (globe-longitude style) -->
+    <!-- Each arc is a smooth, simple curve. The 3 arcs intersect each other, creating the woven look. -->
+
+    <!-- TOP-RIGHT quadrant: arcs go between the top ray and right ray -->
+    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
+      <!-- Arc 1: from top ray outer to right ray outer, sweeping through the corner (longest, the "spine" of the quadrant) -->
+      <path d="M 6,-78 Q 50,-50 78,-10"/>
+      <!-- Arc 2: from top ray (slightly off-axis) to right ray, with a different curvature -->
+      <path d="M -6,-78 Q 30,-30 78,10"/>
+      <!-- Arc 3: shorter, between Arc 1 and Arc 2, creating the weave -->
+      <path d="M 6,-78 Q 35,-25 78,-10" opacity="0.85"/>
     </g>
 
-    <!-- Bottom-right quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round" opacity="0.85">
-      <path d="M 7,80 Q 50,50 80,10"/>
-      <path d="M 7,80 Q 30,40 80,-10" opacity="0.7"/>
-      <path d="M 7,80 Q 60,30 80,10"/>
+    <!-- BOTTOM-RIGHT quadrant -->
+    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
+      <path d="M 6,78 Q 50,50 78,10"/>
+      <path d="M -6,78 Q 30,30 78,-10"/>
+      <path d="M 6,78 Q 35,25 78,10" opacity="0.85"/>
     </g>
 
-    <!-- Bottom-left quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round" opacity="0.85">
-      <path d="M -7,80 Q -50,50 -80,10"/>
-      <path d="M -7,80 Q -30,40 -80,-10" opacity="0.7"/>
-      <path d="M -7,80 Q -60,30 -80,10"/>
+    <!-- BOTTOM-LEFT quadrant -->
+    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
+      <path d="M -6,78 Q -50,50 -78,10"/>
+      <path d="M 6,78 Q -30,30 -78,-10"/>
+      <path d="M -6,78 Q -35,25 -78,10" opacity="0.85"/>
     </g>
 
-    <!-- Top-left quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round" opacity="0.85">
-      <path d="M -7,-80 Q -50,-50 -80,-10"/>
-      <path d="M -7,-80 Q -30,-40 -80,10" opacity="0.7"/>
-      <path d="M -7,-80 Q -60,-30 -80,-10"/>
+    <!-- TOP-LEFT quadrant -->
+    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
+      <path d="M -6,-78 Q -50,-50 -78,-10"/>
+      <path d="M 6,-78 Q -30,-30 -78,10"/>
+      <path d="M -6,-78 Q -35,-25 -78,-10" opacity="0.85"/>
     </g>
   </g>
 </svg>
