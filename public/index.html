@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zia Connections — Websites that work as hard as you do.</title>
-  <meta name="description" content="Albuquerque's Website-as-a-Service agency. Professional, mobile-optimized websites for small businesses starting at $99/month. No upfront costs. Local support.">
-  <meta name="keywords" content="Albuquerque web design, small business websites, NM web design, WaaS, website service">
+  <meta name="description" content="Albuquerque's Website-as-a-Service agency. Professional, mobile-optimized websites for small businesses starting at $99/month. No upfront costs. Local support, honest advice.">
+  <meta name="keywords" content="Albuquerque web design, small business websites, NM web design, WaaS, website service, web design ABQ, New Mexico web design">
   <meta name="author" content="Zia Connections">
   <meta property="og:title" content="Zia Connections — Albuquerque Web Design">
   <meta property="og:description" content="Professional websites for Albuquerque small businesses. $99/month, no upfront cost.">
@@ -14,7 +14,6 @@
   <link rel="canonical" href="https://ziaconnections.com">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/svg+xml" href="/logo.svg?v=4">
-  <!-- cache buster: ?v=4 forces browsers to refetch the new logo -->
   <!-- Schema.org LocalBusiness -->
   <script type="application/ld+json">
   {
@@ -23,6 +22,10 @@
     "name": "Zia Connections",
     "description": "Website-as-a-Service agency serving small businesses in Albuquerque, New Mexico.",
     "url": "https://ziaconnections.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Elías Arenas"
+    },
     "telephone": "+1-505-555-0123",
     "email": "hello@ziaconnections.com",
     "address": {
@@ -31,10 +34,16 @@
       "addressRegion": "NM",
       "addressCountry": "US"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Albuquerque"
-    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Albuquerque"
+      },
+      {
+        "@type": "State",
+        "name": "New Mexico"
+      }
+    ],
     "priceRange": "$$"
   }
   </script>
@@ -49,8 +58,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
+        <li><a href="#process">How it works</a></li>
         <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact" class="btn btn-primary btn-sm">Get Started</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -63,12 +73,12 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <p class="hero-eyebrow">Albuquerque, New Mexico</p>
+        <p class="hero-eyebrow">Albuquerque, New Mexico · A Unified Network Holdings company</p>
         <h1 class="hero-title">Websites that work as hard as <em>you</em> do.</h1>
         <p class="hero-sub">Professional, mobile-optimized websites for local businesses. No upfront costs. No technical headaches. Just a site that brings in customers — starting at $99/month.</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary btn-lg">Get Your Free Audit</a>
-          <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+          <a href="#ethos" class="btn btn-ghost btn-lg">Why Zia exists</a>
         </div>
         <div class="hero-trust">
           <span>✓ Free technical audit</span>
@@ -127,30 +137,134 @@
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section id="how-it-works" class="section section-alt">
+  <!-- ETHOS / Why Zia Exists -->
+  <section id="ethos" class="section ethos">
+    <div class="container">
+      <p class="ethos-eyebrow">Why we exist</p>
+      <h2 class="ethos-headline">ABQ small businesses shouldn't have to choose between a $5,000 upfront bill and a Wix template.</h2>
+      <div class="ethos-grid">
+        <div class="ethos-block">
+          <h3>We're honest about the trade-offs</h3>
+          <p>A website is a tool, not a magic wand. It can bring in customers, build credibility, and save you time — but it can't fix a bad product or replace real customer service. We'll tell you when a website will help and when it won't. Sometimes the honest answer is "you don't need one yet."</p>
+        </div>
+        <div class="ethos-block">
+          <h3>No account managers. No middlemen.</h3>
+          <p>You work with the person doing the work. I'm Elías — I designed this site, I run this company, and I'll be the one answering your email. There's no project manager between us and no junior dev offshore. Just direct, honest communication.</p>
+        </div>
+        <div class="ethos-block">
+          <h3>Local means local</h3>
+          <p>I live in Albuquerque. I know what it's like to watch a contractor's empty Google listing and wonder where the work goes. I'm building Zia Connections for the businesses on my block — the people I see at the co-op, the ones who answer their own phones.</p>
+        </div>
+        <div class="ethos-block">
+          <h3>You can leave whenever you want</h3>
+          <p>No long contracts. No early-termination fees. If we're not earning our keep, you should be able to fire us — and take your content with you. We make money by being good, not by being hard to leave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How WaaS Works (explainer) -->
+  <section class="section section-alt waas-explainer">
+    <div class="container">
+      <h2 class="section-title">What is "Website as a Service" anyway?</h2>
+      <p class="section-sub">Most agencies charge $5,000–$25,000 upfront for a website. We do it differently.</p>
+      <div class="waas-compare">
+        <div class="waas-col waas-old">
+          <h3>Traditional Agency</h3>
+          <p class="waas-model">Fixed-Price Project</p>
+          <ul>
+            <li>$5,000–$25,000+ upfront</li>
+            <li>You own the code (theoretically)</li>
+            <li>3–6 month timeline</li>
+            <li>After launch: you're on your own</li>
+            <li>Hosting, security, updates: extra</li>
+          </ul>
+        </div>
+        <div class="waas-col waas-new">
+          <h3>Zia Connections</h3>
+          <p class="waas-model">Monthly Subscription</p>
+          <ul>
+            <li>$99–$199/month, no upfront</li>
+            <li>Cancel anytime</li>
+            <li>2-week launch</li>
+            <li>After launch: we're still here</li>
+            <li>Hosting, security, updates: included</li>
+          </ul>
+        </div>
+      </div>
+      <p class="waas-foot">WaaS isn't right for everyone — if you need a custom e-commerce platform or complex backend, we'll tell you so. But for the 90% of small businesses who need a clean, fast, professional website that just works, it's a better deal.</p>
+    </div>
+  </section>
+
+  <!-- Process (expanded to week-by-week) -->
+  <section id="process" class="section">
     <div class="container">
       <h2 class="section-title">From "I should get a website" to live in 14 days.</h2>
+      <p class="section-sub">No surprises. No 3-month "discovery phase." You see real progress every week.</p>
       <div class="steps">
         <div class="step">
+          <div class="step-week">Week 1</div>
           <div class="step-num">1</div>
-          <h3>Free Audit</h3>
-          <p>We scan your current online presence and show you exactly what's missing — security, mobile, search visibility. No pitch, just real data.</p>
+          <h3>Audit & Mockup</h3>
+          <p>We scan your current online presence and build a working preview of your new site — with your real business name, address, and content. You see it before you sign anything.</p>
         </div>
         <div class="step">
+          <div class="step-week">Week 1–2</div>
           <div class="step-num">2</div>
-          <h3>Custom Mockup</h3>
-          <p>We build a real, working sample of your new website — with your business name, address, and phone number — and send you a link.</p>
+          <h3>You Approve & Customize</h3>
+          <p>Love the direction? We refine it. Want different colors, layout, or copy? Two rounds of revisions are included. We don't move to launch until you're happy.</p>
         </div>
         <div class="step">
+          <div class="step-week">Week 2</div>
           <div class="step-num">3</div>
-          <h3>You Approve</h3>
-          <p>Love it? Sign up. Want changes? We tweak it. No pressure, no contracts longer than a month.</p>
+          <h3>Launch on Your Domain</h3>
+          <p>We deploy on your domain, set up SSL, configure analytics, and connect Google Business Profile. Most sites go live in 14 days from kickoff.</p>
         </div>
         <div class="step">
+          <div class="step-week">Ongoing</div>
           <div class="step-num">4</div>
-          <h3>Go Live & Stay Live</h3>
-          <p>We launch on your domain, keep it secure, fast, and updated. Text us anytime to make changes.</p>
+          <h3>Stay Live & Updated</h3>
+          <p>Hosting, security, backups, and updates are included. Text or email to make changes — most are done same-day. Quarterly reviews to keep content fresh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included (ongoing maintenance clarity) -->
+  <section class="section section-alt included">
+    <div class="container">
+      <h2 class="section-title">Every plan includes the boring stuff that matters.</h2>
+      <p class="section-sub">This is what "ongoing maintenance" actually means — the work you don't see, but that keeps your site online, fast, and safe.</p>
+      <div class="grid grid-3">
+        <div class="included-item">
+          <div class="included-icon">🔒</div>
+          <h3>SSL & Security</h3>
+          <p>HTTPS everywhere, automatic renewals, security headers, DDoS protection through Cloudflare. We monitor uptime daily.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">⚡</div>
+          <h3>Fast Hosting</h3>
+          <p>Deployed on Railway's edge network. Pages load in under 2 seconds on mobile. Google ranks fast sites higher — that matters for your business.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">📱</div>
+          <h3>Mobile-First</h3>
+          <p>Over 60% of local searches happen on phones. Every site we build is designed mobile-first, then scaled up for desktop.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">🗺️</div>
+          <h3>Local SEO</h3>
+          <p>Google Business Profile sync, schema markup, and on-page SEO. When someone searches "your service + Albuquerque," you show up.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">💾</div>
+          <h3>Backups & Recovery</h3>
+          <p>Daily backups, 7-day retention. If something breaks, we restore it — usually before you even notice.</p>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">✏️</div>
+          <h3>Content Updates</h3>
+          <p>Need to change hours, add a new service, update your menu? Text or email. Most changes are done same business day.</p>
         </div>
       </div>
     </div>
@@ -207,45 +321,148 @@
           <a href="#contact" class="btn btn-ghost btn-block">Get Started</a>
         </div>
       </div>
+      <p class="pricing-foot">No setup fees. No long-term contracts. Cancel anytime — and take your content with you.</p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section section-alt">
-    <div class="container contact-inner">
-      <div class="contact-copy">
-        <h2 class="section-title">Ready to stop losing customers to "no website" Google results?</h2>
-        <p>Drop your info and we'll send you a free technical audit of your current online presence — plus a working mockup of what your new site could look like. No pitch, no pressure.</p>
-        <ul class="contact-list">
-          <li>📞 <a href="tel:+15055550123">(505) 555-0123</a></li>
-          <li>✉️ <a href="mailto:hello@ziaconnections.com">hello@ziaconnections.com</a></li>
-          <li>📍 Albuquerque, New Mexico</li>
-        </ul>
+  <!-- Portfolio (real sites only) -->
+  <section class="section section-alt portfolio">
+    <div class="container">
+      <h2 class="section-title">Recent work</h2>
+      <p class="section-sub">Real sites built and maintained. No client work to show publicly yet — these are the projects that exist in the wild.</p>
+      <div class="grid grid-3">
+        <a href="https://unifiednetworkholdings.com" target="_blank" rel="noopener" class="portfolio-card">
+          <div class="portfolio-thumb portfolio-thumb-unh">
+            <div class="portfolio-mark"></div>
+          </div>
+          <h3>Unified Network Holdings</h3>
+          <p>Governance site for the parent company. Custom fractal logo, dark mode, deployed on Cloudflare edge.</p>
+          <span class="portfolio-link">Visit site →</span>
+        </a>
+        <div class="portfolio-card portfolio-card-zia">
+          <div class="portfolio-thumb portfolio-thumb-zia">
+            <div class="portfolio-mark portfolio-mark-zia"></div>
+          </div>
+          <h3>Zia Connections</h3>
+          <p>This very site. WaaS agency landing page — built with the same stack and process we offer clients.</p>
+          <span class="portfolio-link portfolio-link-muted">You are here</span>
+        </div>
+        <a href="https://lenzre.com" target="_blank" rel="noopener" class="portfolio-card">
+          <div class="portfolio-thumb portfolio-thumb-lenzre">
+            <div class="portfolio-mark portfolio-mark-lenzre"></div>
+          </div>
+          <h3>Lenz Real Estate</h3>
+          <p>Family real estate business. Audit and ongoing maintenance — security headers, DMARC, daily backups.</p>
+          <span class="portfolio-link">Visit site →</span>
+        </a>
       </div>
-      <form class="contact-form" id="contactForm" action="/api/lead" method="POST">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container faq-container">
+      <h2 class="section-title">Common questions</h2>
+      <p class="section-sub">If yours isn't here, just ask — we respond within one business day.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do I own my website?</summary>
+          <div class="faq-body">
+            <p>The domain is always yours. The website content (text, images, your business info) is yours. We hold the underlying code and platform during the subscription — that's how we're able to maintain it for you. If you cancel, we'll provide an export of all your content in standard formats and help you transition to another provider or take it in-house. No ransom holds.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if I cancel?</summary>
+          <div class="faq-body">
+            <p>Email us. We honor month-to-month cancellation with no fees. Your site stays live through the end of the paid period, then we provide a 30-day window to export your content or migrate to another host. We don't make cancellation hard, and we don't make it awkward.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to launch?</summary>
+          <div class="faq-body">
+            <p>Most sites launch within 14 days of kickoff. The timeline depends on how fast you can provide content (text, photos, logo) and how many revision rounds you want. We're fast, but not at the expense of getting it right.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I already have a website?</summary>
+          <div class="faq-body">
+            <p>We'll audit it for free and tell you honestly whether it needs a rebuild or just a tune-up. If your current site is fine, we'll say so. If it needs work, we'll show you exactly what and give you a fixed quote — not a "starting at" price that doubles later.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I make changes to my own site?</summary>
+          <div class="faq-body">
+            <p>Yes — but most of our clients don't, because we handle it for them. The Growth and Pro plans include content updates, so you just text or email what you need changed. If you'd rather log in and edit yourself, we can set that up too. No markup fees for "client edits."</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you do e-commerce / online stores?</summary>
+          <div class="faq-body">
+            <p>Yes, on the Pro plan. We integrate with Stripe, Square, and Shopify. For simple product catalogs (under 50 SKUs), we build it directly into your site. For larger stores, we usually recommend Shopify and we manage the integration.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I need something custom?</summary>
+          <div class="faq-body">
+            <p>Tell us. We build custom features on top of the standard plan — booking systems, review widgets, custom forms, third-party integrations. We'll scope it, quote it as a fixed price, and only start work after you approve.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why should I trust a new agency?</summary>
+          <div class="faq-body">
+            <p>Fair question. We don't have a 10-year track record yet. What we have: transparent pricing, no long-term contracts, a working example of the process (this site), and a real person (Elías) who answers your email. If we're not earning our keep, you fire us. That's the test.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder / Contact -->
+  <section id="contact" class="section section-alt contact-section">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-copy">
+          <div class="founder-block">
+            <div class="founder-avatar" aria-hidden="true">EA</div>
+            <div>
+              <p class="founder-name">Elías Arenas</p>
+              <p class="founder-role">Founder, Zia Connections</p>
+            </div>
+          </div>
+          <h2 class="section-title contact-title">Ready to stop losing customers to "no website" Google results?</h2>
+          <p>Drop your info and I'll personally send you a free technical audit of your current online presence — plus a working mockup of what your new site could look like. No pitch, no pressure, no junior account manager.</p>
+          <ul class="contact-list">
+            <li>📞 <a href="tel:+15055550123">(505) 555-0123</a></li>
+            <li>✉️ <a href="mailto:hello@ziaconnections.com">hello@ziaconnections.com</a></li>
+            <li>📍 Albuquerque, New Mexico</li>
+            <li>⏱️ Response within 1 business day, every time</li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="business">Business Name</label>
-          <input type="text" id="business" name="business" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone (optional)</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-        <div class="form-group">
-          <label for="website">Current Website (if any)</label>
-          <input type="url" id="website" name="website" placeholder="https://">
-        </div>
-        <button type="submit" class="btn btn-primary btn-block btn-lg">Send My Free Audit</button>
-        <p class="form-note">We respond within 1 business day. No spam, ever.</p>
-      </form>
+        <form class="contact-form" id="contactForm" action="/api/lead" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="website">Current Website (if any)</label>
+            <input type="url" id="website" name="website" placeholder="https://">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Send My Free Audit</button>
+          <p class="form-note">We respond within 1 business day. No spam, ever. Cancel anytime.</p>
+        </form>
+      </div>
     </div>
   </section>
 
