@@ -287,6 +287,13 @@ a:hover { color: var(--color-primary-dark); }
   line-height: 1.65;
   padding-left: 1.5rem;
 }
+.ethos-block p + p {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
 
 /* === WaaS Explainer === */
 .waas-compare {
