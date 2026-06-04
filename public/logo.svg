@@ -1,68 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Zia Connections v5: matches reference design more faithfully -->
-  <!-- - Thick outer ring (red) -->
-  <!-- - HOLLOW white center circle (negative space) -->
-  <!-- - 10 lines: top 2, bottom 2, left 3, right 3 -->
-  <!-- - 4 quadrants each with 3 simple arcs (globe longitude style) -->
-  <!-- - Brick red / firebrick -->
+  <!-- Zia Connections v6: each side has 4 lines, with the inner 2 being longer than the outer 2 -->
+  <!-- The rays fan out from the center (wider base) and tighten toward the tips (narrower) -->
+  <!-- This creates a subtle "spreading" effect at the center, like the rays emerge from a single point -->
 
   <g transform="translate(100,100)">
     <!-- Outer thick ring -->
     <circle cx="0" cy="0" r="92" fill="none" stroke="#a02828" stroke-width="6"/>
 
-    <!-- Hollow white center circle -->
+    <!-- Hollow white center circle (slightly larger to accommodate the fanning lines) -->
     <circle cx="0" cy="0" r="11" fill="#ffffff" stroke="#a02828" stroke-width="4"/>
 
-    <!-- 4 cardinal rays: top (2 vertical lines), from outside the center disk to the outer ring -->
-    <line x1="-6" y1="-12" x2="-6" y2="-78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="6"  y1="-12" x2="6"  y2="-78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- TOP: 4 lines, with inner 2 longer than outer 2 -->
+    <!-- Inner 2 (the long ones): start near the center disk, extend almost to the outer ring -->
+    <line x1="-3" y1="-12" x2="-3" y2="-78" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="3"  y1="-12" x2="3"  y2="-78" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <!-- Outer 2 (the short ones): start near the center disk, but end earlier (tapered tips) -->
+    <line x1="-12" y1="-12" x2="-12" y2="-58" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="12"  y1="-12" x2="12"  y2="-58" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
 
-    <!-- Bottom (2 vertical lines) -->
-    <line x1="-6" y1="12" x2="-6" y2="78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="6"  y1="12" x2="6"  y2="78" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- BOTTOM: 4 lines, inner 2 longer than outer 2 (mirror of top) -->
+    <line x1="-3" y1="12" x2="-3" y2="78" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="3"  y1="12" x2="3"  y2="78" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-12" y1="12" x2="-12" y2="58" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="12"  y1="12" x2="12"  y2="58" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
 
-    <!-- Left (3 horizontal lines) -->
-    <line x1="-12" y1="-10" x2="-78" y2="-10" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="-12" y1="0"   x2="-78" y2="0"   stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="-12" y1="10"  x2="-78" y2="10"  stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- LEFT: 4 lines, inner 2 longer than outer 2 -->
+    <line x1="-12" y1="-3" x2="-78" y2="-3" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-12" y1="3"  x2="-78" y2="3"  stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-12" y1="-12" x2="-58" y2="-12" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-12" y1="12"  x2="-58" y2="12"  stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
 
-    <!-- Right (3 horizontal lines) -->
-    <line x1="12" y1="-10" x2="78" y2="-10" stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="12" y1="0"   x2="78" y2="0"   stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
-    <line x1="12" y1="10"  x2="78" y2="10"  stroke="#a02828" stroke-width="6" stroke-linecap="round"/>
+    <!-- RIGHT: 4 lines, inner 2 longer than outer 2 -->
+    <line x1="12" y1="-3" x2="78" y2="-3" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="12" y1="3"  x2="78" y2="3"  stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="12" y1="-12" x2="58" y2="-12" stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
+    <line x1="12" y1="12"  x2="58" y2="12"  stroke="#a02828" stroke-width="5" stroke-linecap="round"/>
 
     <!-- 4 quadrants, 3 simple arcs each (globe-longitude style) -->
-    <!-- Each arc is a smooth, simple curve. The 3 arcs intersect each other, creating the woven look. -->
-
-    <!-- TOP-RIGHT quadrant: arcs go between the top ray and right ray -->
     <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
-      <!-- Arc 1: from top ray outer to right ray outer, sweeping through the corner (longest, the "spine" of the quadrant) -->
-      <path d="M 6,-78 Q 50,-50 78,-10"/>
-      <!-- Arc 2: from top ray (slightly off-axis) to right ray, with a different curvature -->
-      <path d="M -6,-78 Q 30,-30 78,10"/>
-      <!-- Arc 3: shorter, between Arc 1 and Arc 2, creating the weave -->
-      <path d="M 6,-78 Q 35,-25 78,-10" opacity="0.85"/>
-    </g>
+      <!-- TOP-RIGHT quadrant -->
+      <path d="M 12,-58 Q 50,-50 58,-12"/>
+      <path d="M -12,-58 Q 30,-30 58,12"/>
+      <path d="M 12,-58 Q 35,-25 58,-12" opacity="0.85"/>
 
-    <!-- BOTTOM-RIGHT quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
-      <path d="M 6,78 Q 50,50 78,10"/>
-      <path d="M -6,78 Q 30,30 78,-10"/>
-      <path d="M 6,78 Q 35,25 78,10" opacity="0.85"/>
-    </g>
+      <!-- BOTTOM-RIGHT quadrant -->
+      <path d="M 12,58 Q 50,50 58,12"/>
+      <path d="M -12,58 Q 30,30 58,-12"/>
+      <path d="M 12,58 Q 35,25 58,12" opacity="0.85"/>
 
-    <!-- BOTTOM-LEFT quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
-      <path d="M -6,78 Q -50,50 -78,10"/>
-      <path d="M 6,78 Q -30,30 -78,-10"/>
-      <path d="M -6,78 Q -35,25 -78,10" opacity="0.85"/>
-    </g>
+      <!-- BOTTOM-LEFT quadrant -->
+      <path d="M -12,58 Q -50,50 -58,12"/>
+      <path d="M 12,58 Q -30,30 -58,-12"/>
+      <path d="M -12,58 Q -35,25 -58,12" opacity="0.85"/>
 
-    <!-- TOP-LEFT quadrant -->
-    <g fill="none" stroke="#a02828" stroke-width="3" stroke-linecap="round">
-      <path d="M -6,-78 Q -50,-50 -78,-10"/>
-      <path d="M 6,-78 Q -30,-30 -78,10"/>
-      <path d="M -6,-78 Q -35,-25 -78,-10" opacity="0.85"/>
+      <!-- TOP-LEFT quadrant -->
+      <path d="M -12,-58 Q -50,-50 -58,-12"/>
+      <path d="M 12,-58 Q -30,-30 -58,12"/>
+      <path d="M -12,-58 Q -35,-25 -58,-12" opacity="0.85"/>
     </g>
   </g>
 </svg>
