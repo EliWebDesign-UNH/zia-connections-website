@@ -475,7 +475,6 @@ a:hover { color: var(--color-primary-dark); }
 }
 .portfolio-thumb-unh { background: #0a0a0b; }
 .portfolio-thumb-zia { background: linear-gradient(135deg, #c44536 0%, #9c2f24 100%); }
-.portfolio-thumb-lenzre { background: linear-gradient(135deg, #1e3a5f 0%, #0a1929 100%); }
 .portfolio-mark {
   width: 80px;
   height: 80px;
@@ -486,11 +485,6 @@ a:hover { color: var(--color-primary-dark); }
 .portfolio-mark-zia {
   background: radial-gradient(circle, #f4a261 0%, #c44536 60%, #9c2f24 100%);
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
-}
-.portfolio-mark-lenzre {
-  background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
 }
 .portfolio-card h3 {
   font-family: var(--font-display);
@@ -517,6 +511,13 @@ a:hover { color: var(--color-primary-dark); }
 .portfolio-link-muted {
   color: var(--color-text-muted);
   cursor: default;
+}
+.portfolio-foot {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-top: 2.5rem;
+  font-style: italic;
 }
 
 /* === FAQ === */
