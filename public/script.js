@@ -25,9 +25,25 @@
     });
   }
 
-  // Contact form submission
+  // Contact form submission (Web3Forms)
   const form = document.getElementById('contactForm');
   if (form) {
+    // Dynamically set subject + replyto from user input
+    const businessInput = form.querySelector('#business');
+    const emailInput = form.querySelector('#email');
+    const subjectInput = form.querySelector('input[name="subject"]');
+    const replytoInput = form.querySelector('input[name="replyto"]');
+    if (businessInput && subjectInput) {
+      businessInput.addEventListener('input', () => {
+        subjectInput.value = `New Lead from ZiaConnections.com — ${businessInput.value || 'New Business'}`;
+      });
+    }
+    if (emailInput && replytoInput) {
+      emailInput.addEventListener('input', () => {
+        replytoInput.value = emailInput.value;
+      });
+    }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
@@ -35,16 +51,17 @@
       btn.disabled = true;
       btn.textContent = 'Sending…';
       try {
-        const data = Object.fromEntries(new FormData(form));
-        const res = await fetch('/api/lead', {
+        const formData = new FormData(form);
+        const res = await fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          headers: { 'Accept': 'application/json' },
+          body: formData
         });
-        if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
           form.innerHTML = '<div style="text-align:center;padding:2rem;"><h3 style="color:var(--color-primary);margin-bottom:1rem;">Thanks! We got it.</h3><p style="color:var(--color-text-muted);">Check your inbox — your free audit is on its way. We\'ll be in touch within 1 business day.</p></div>';
         } else {
-          throw new Error('Server error');
+          throw new Error(data.message || 'Submission failed');
         }
       } catch (err) {
         btn.disabled = false;

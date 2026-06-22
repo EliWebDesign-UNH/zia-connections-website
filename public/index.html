@@ -431,7 +431,14 @@
             <li>⏱️ Response within 1 business day, every time</li>
           </ul>
         </div>
-        <form class="contact-form" id="contactForm" action="/api/lead" method="POST">
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms required -->
+          <input type="hidden" name="access_key" value="4c456561-6a1e-4cbe-8488-4f24e238e8d4">
+          <input type="hidden" name="subject" value="New Lead from ZiaConnections.com — ${business}">
+          <input type="hidden" name="from_name" value="Zia Connections Website">
+          <input type="hidden" name="replyto" value="${email}">
+          <!-- Honeypot spam protection -->
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>

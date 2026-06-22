@@ -39,10 +39,10 @@ app.use((req, res, next) => {
       "style-src 'self'",
       "script-src 'self'",
       "font-src 'self'",
-      "connect-src 'self'",
+      "connect-src 'self' https://api.web3forms.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
-      "form-action 'self'",
+      "form-action 'self' https://api.web3forms.com",
     ].join('; ')
   );
   // No caching so content/logo changes show up immediately (matches UNH site)
